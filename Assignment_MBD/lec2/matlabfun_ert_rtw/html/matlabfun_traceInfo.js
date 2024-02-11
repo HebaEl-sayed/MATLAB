@@ -1,0 +1,29 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "matlabfun"};
+	this.sidHashMap["matlabfun"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<S1>"] = {sid: "matlabfun:3"};
+	this.sidHashMap["matlabfun:3"] = {rtwname: "<S1>"};
+	this.rtwnameHashMap["<S2>"] = {sid: "matlabfun:8"};
+	this.sidHashMap["matlabfun:8"] = {rtwname: "<S2>"};
+	this.rtwnameHashMap["<Root>/Input"] = {sid: "matlabfun:4"};
+	this.sidHashMap["matlabfun:4"] = {rtwname: "<Root>/Input"};
+	this.rtwnameHashMap["<Root>/Constant"] = {sid: "matlabfun:6"};
+	this.sidHashMap["matlabfun:6"] = {rtwname: "<Root>/Constant"};
+	this.rtwnameHashMap["<Root>/Display"] = {sid: "matlabfun:7"};
+	this.sidHashMap["matlabfun:7"] = {rtwname: "<Root>/Display"};
+	this.rtwnameHashMap["<Root>/MATLAB Function1"] = {sid: "matlabfun:3"};
+	this.sidHashMap["matlabfun:3"] = {rtwname: "<Root>/MATLAB Function1"};
+	this.rtwnameHashMap["<Root>/MATLAB Function2"] = {sid: "matlabfun:8"};
+	this.sidHashMap["matlabfun:8"] = {rtwname: "<Root>/MATLAB Function2"};
+	this.rtwnameHashMap["<Root>/y"] = {sid: "matlabfun:5"};
+	this.sidHashMap["matlabfun:5"] = {rtwname: "<Root>/y"};
+	this.rtwnameHashMap["<S1>:1"] = {sid: "matlabfun:3:1"};
+	this.sidHashMap["matlabfun:3:1"] = {rtwname: "<S1>:1"};
+	this.rtwnameHashMap["<S2>:1"] = {sid: "matlabfun:8:1"};
+	this.sidHashMap["matlabfun:8:1"] = {rtwname: "<S2>:1"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
